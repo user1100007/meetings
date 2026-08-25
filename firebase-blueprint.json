@@ -1,0 +1,56 @@
+{
+  "entities": {
+    "users": {
+      "title": "Users",
+      "description": "User profile information",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "role": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email"]
+    },
+    "meetings": {
+      "title": "Meeting Minutes",
+      "description": "School management meeting records",
+      "properties": {
+        "schoolName": { "type": "string" },
+        "academicYear": { "type": "string" },
+        "meetingPlace": { "type": "string" },
+        "meetingChair": { "type": "string" },
+        "minuteTaker": { "type": "string" },
+        "meetingNumber": { "type": "number" },
+        "title": { "type": "string" },
+        "date": { "type": "string" },
+        "time": { "type": "string" },
+        "participants": { "type": "string" },
+        "agenda": { "type": "array", "items": { "type": "string" } },
+        "decisions": { "type": "array", "items": { "type": "string" } },
+        "attachments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "name": { "type": "string" },
+              "url": { "type": "string" },
+              "storagePath": { "type": "string" },
+              "fileType": { "type": "string" },
+              "mimeType": { "type": "string" },
+              "size": { "type": "number" },
+              "uploadedAt": { "type": "number" },
+              "description": { "type": "string" }
+            }
+          }
+        },
+        "status": { "type": "string" },
+        "userId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["schoolName", "meetingNumber", "userId"]
+    }
+  }
+}

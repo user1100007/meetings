@@ -1,0 +1,6 @@
+{
+  "name": "School Meeting Minutes",
+  "description": "School management meeting minutes manager with Recharts visualizations, Gemini AI summarization, Firebase Storage document attachments, and Firestore integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
